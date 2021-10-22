@@ -1,0 +1,75 @@
+ /* CSS: Folha de estilo em cascata */
+ *{
+   margin: 0;
+ } /* se colocar *{} tudo que fizer de CSS vai fazer na pagina inteira */
+  html, body {
+    --black: hsl(240, 6%, 13%);
+
+    --grey: hsl(240, 9%, 89%); /* colocou uma variaver utilizando --grey onde utilizou ela no html e body*/
+
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    display: grid;
+    place-items: center; /* centralizou o HTML e o Body */
+}
+  main {
+    background: url(imagem/background.png);
+    width: 375px;
+    height: 812px;
+  }
+ .conteiner {
+   max-width: 250px; /* largura maxima */
+   margin-left: auto; /* Margem esquerda */
+   margin-right: auto; /* Margem direita */
+   text-align: center; /* Alinhamento do texto */
+
+   color: var(--grey);
+ }
+ .avatar {
+   width: 10rem; /* largura */
+   margin: 11.5rem auto 0;
+   position: relative;
+   
+ }
+ .avatar span {
+   position : absolute;
+   top: -15px;
+   z-index: 1; /* coloca a figura em cima da outra utilizando o eixo z */
+ }
+ .avatar > img {
+   width: 10rem;
+   height: 11.5rem;
+   object-fit: cover;
+
+   clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%); /* para deixar uma figura com o formato losangulo, procura no google clip CSS */
+ }
+
+    h1 {
+      font-size: 1.5rem;
+
+      margin-top: 24px;
+    }
+    a {
+      color: var(--grey);
+      text-decoration: none;
+      margin-top: 4px;
+      display: flex;
+      gap: 12px;
+      justify-content: center; /* centralizou o a */
+    }
+    p {
+      margin-top: 32px;
+    }
+    ul {
+      margin-top: 62px; /* coloca margem no top */
+      list-style: none; /* retirou as bolinhas do li */
+      padding: 0; /*alinhou as ul*/
+      display: flex; /* colocou os icones lado a lado */
+      gap: 8px; /* colocou o espaço entre os icones */
+      justify-content: center; /* centralizou os icones no eixo principal , o text - align não funcionou pq não é texto */
+     
+    }
+    
